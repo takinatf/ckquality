@@ -112,28 +112,58 @@ Junk Removal
 </div>
 </section> -->
 
-  <!-- QUOTE CALCULATOR -->
-  <section id="quote" class="bg-green-900 text-white py-20 px-6 md:px-20 text-center">
-    <h2 class="text-4xl font-bold mb-6">Instant Quote Calculator</h2>
+<!-- CONTACT INFORMATION -->
+<section id="quote" class="bg-green-900 text-white py-20 px-6 md:px-20 text-center">
+  <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+  <p class="text-xl mb-10">
+    Ready to schedule service or need more information? Contact us today!
+  </p>
 
-    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg max-w-lg mx-auto">
-      <form id="quoteForm">
-        <label class="font-semibold">Square Footage</label>
-        <input type="number" id="sqft" placeholder="e.g. 1200" class="w-full mb-4 border rounded p-3" />
-
-        <label class="font-semibold">Surface Type</label>
-        <select id="surface" class="w-full mb-4 border rounded p-3">
-          <option value="0.25">House Exterior</option>
-          <option value="0.10">Driveway</option>
-          <option value="0.12">Deck / Fence</option>
-        </select>
-
-        <button type="button" onclick="calculateQuote()" class="bg-green-600 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-semibold shadow-lg w-full transition">Calculate Quote</button>
-      </form>
-
-      <p class="mt-4 text-xl font-bold" id="quoteResult"></p>
+  <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg max-w-lg mx-auto text-left space-y-6">
+    
+    <div class="flex items-center gap-4">
+      <span class="text-2xl">📞</span>
+      <div>
+        <p class="font-semibold">Phone</p>
+        <a href="tel:+18635218159" class="text-green-700 font-bold hover:underline">
+          (863) 521-8159
+        </a>
+      </div>
     </div>
-  </section>
+
+    <div class="flex items-center gap-4">
+      <span class="text-2xl">📧</span>
+      <div>
+        <p class="font-semibold">Email</p>
+        <p>ckqualitymaintenance@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <span class="text-2xl">📍</span>
+      <div>
+        <p class="font-semibold">Service Area</p>
+        <p>Polk County & surrounding areas</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <span class="text-2xl">🕒</span>
+      <div>
+        <p class="font-semibold">Business Hours</p>
+        <p>Monday – Saturday: 8:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+
+    <a
+      href="tel:+18635218159"
+      class="block text-center bg-green-600 hover:bg-green-800 text-white px-6 py-4 rounded-lg font-semibold shadow-lg transition text-xl mt-6"
+    >
+      📞 Call Now
+    </a>
+
+  </div>
+</section>
 
 <!-- GALLERY SLIDESHOW -->
 <section id="gallery" class="py-20 px-6 md:px-20 bg-gray-100">
@@ -220,16 +250,3 @@ updateSlides();
 <script>
 // Scroll Reveal animations
 ScrollReveal().reveal('.service-card', { interval: 200, distance: '40px', origin: 'bottom' });
-
-// Quote Calculator
-function calculateQuote() {
-let sqft = document.getElementById('sqft').value;
-let rate = document.getElementById('surface').value;
-if(!sqft) return document.getElementById('quoteResult').innerText = "Please enter square footage.";
-let cost = sqft * rate;
-document.getElementById('quoteResult').innerText = `Estimated Price: $${cost.toFixed(2)}`;
-}
-</script>
-
-</body>
-</html>
